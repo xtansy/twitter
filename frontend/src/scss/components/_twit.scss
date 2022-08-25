@@ -1,0 +1,56 @@
+.twit {
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    &__date {
+        color: $fullname-color;
+    }
+    span {
+        color: $fullname-color;
+    }
+    &__text {
+        margin-left: 53px;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-block {
+            display: flex;
+            align-items: center;
+        }
+        &-block> *:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__icons {
+        margin-top: 15px;
+        margin-left: 35px;
+        display: flex;
+    }
+    &__icons > *:not(:last-child) {
+        margin-right: 90px;
+    }
+}
+.twit {
+    border-bottom: 1px solid $hrcolor;
+}
+
+
+.fulltwit {
+    padding: 15px 0 15px 0;
+    &__info {
+        display: flex;
+        align-items:center;
+        &-text {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__text {
+        margin: 20px 0 20px 0;
+    }
+    border-bottom: 1px solid $hrcolor;
+
+}

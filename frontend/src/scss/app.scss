@@ -1,0 +1,38 @@
+@import "variables";
+@import "libs/normalize";
+
+@import "components/all";
+
+body {
+    color: white;
+}
+a,
+span,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+._container {
+    // padding: 0px 165px;
+    margin: 0 auto;
+    max-width: 1350px;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.home__centered-loading-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@import "media";

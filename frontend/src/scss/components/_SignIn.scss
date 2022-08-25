@@ -1,0 +1,71 @@
+.signIn {
+    font-weight: 400;
+    display: flex;
+    &__left {
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+
+        background-color: #045de9;
+        background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+        &-text > *:not(:last-child) {
+            margin-bottom: 35px;
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &-block {
+                display: flex;
+                p {
+                    margin-left: 8px;
+                    font-weight: 400;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    &__right {
+        img {
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: black;
+            font-size: 42px;
+        }
+        width: 50vw;
+        max-width: 500px;
+        padding: 0 50px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            margin-top: 55px;
+            color: black;
+        }
+        &-signIn {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            &-signButton {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__form:first-child {
+        margin-top: 15px;
+    }
+
+    &__alert {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+}

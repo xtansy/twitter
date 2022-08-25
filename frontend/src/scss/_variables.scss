@@ -1,0 +1,93 @@
+$button-background: #3a7eec;
+$button-backgroundActive: #3a7eec71;
+$white: white;
+$hrcolor: rgba(94, 125, 226, 0.226);
+$fullname-color: hsla(0, 3%, 68%, 0.986);
+
+.button {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    padding: 5px;
+    align-items: center;
+    border-radius: 25px;
+    color: white;
+    background-color: $button-background;
+
+    transition: all 0.3s ease-in-out;
+}
+.outline {
+    color: $button-background;
+    background-color: white;
+    border: 1px solid $button-background;
+}
+
+.button:active {
+    background-color: $button-backgroundActive;
+}
+.withOpenModal:before {
+    background: rgba(31, 30, 30, 0.71);
+    content: "";
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    input {
+        border: 1px solid $button-background;
+        border-radius: 5px;
+        padding: 8px;
+        transition: all 0.1s ease-in-out;
+    }
+    input:focus {
+        border: 1px solid rgba(0, 128, 0, 0.74);
+    }
+}
+.form > *:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.input {
+    padding: 7px 0 7px 20px;
+    border-radius: 20px;
+    border: none;
+    min-height: 35px;
+    width: 100%;
+    border: 1px solid $button-background;
+    transition: all 0.3s ease-in-out;
+}
+.input:focus {
+    background-color: $hrcolor;
+}
+
+.avatar {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.fullname {
+    font-weight: 500;
+}
+.username {
+    color: $fullname-color;
+}
+
+.button__disabled {
+    background-color: $button-backgroundActive;
+    cursor: unset;
+}
+
+.error {
+    color: red;
+}
+.error-input {
+    border: 1px solid rgba(213, 15, 15, 0.74) !important;
+}

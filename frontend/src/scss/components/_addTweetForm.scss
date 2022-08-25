@@ -1,0 +1,48 @@
+.mytwit {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $hrcolor;
+
+    &__header {
+        display: flex;
+        &-textarea {
+            border: none;
+            margin-left: 10px;
+            width: 100%;
+            resize: vertical;
+        }
+    }
+    &__subheader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-button {
+            min-width: 120px;
+            margin-left: 23px;
+        }
+        &-icons {
+            display: flex;
+            margin-left: 50px;
+            button {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        &-icons > *:not(:last-child) {
+            margin-right: 25px;
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            &__progress {
+                position: relative;
+                left: 10%;
+            }
+            &__count {
+                color: $fullname-color;
+            }
+        }
+    }
+}

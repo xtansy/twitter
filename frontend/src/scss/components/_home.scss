@@ -1,0 +1,166 @@
+.home {
+    border-top: 5px solid $hrcolor;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: black;
+
+    &__menu {
+        flex-basis: 400px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        button {
+            display: block;
+            padding: 0;
+            margin: 0;
+            transition: 0.3s all ease-in-out;
+        }
+        &-logo {
+            width: 32px;
+            margin-bottom: 25px !important;
+        }
+        img {
+            margin-bottom: 30px;
+        }
+        &-ul {
+            display: flex;
+            flex-direction: column;
+            li {
+                max-width: 50px;
+                cursor: pointer;
+                display: flex;
+
+                p {
+                    margin-left: 25px;
+                    font-weight: 900;
+                }
+
+                transition: 0.3s all ease-in-out;
+            }
+            li:hover {
+                color: $button-background;
+                button {
+                    color: $button-background;
+                }
+            }
+        }
+        &-ul > *:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        &-button {
+            margin-top: 25px !important;
+            width: 50%;
+        }
+    }
+
+    &__content {
+        flex-basis: 500px;
+        border-left: 1px solid $hrcolor;
+        border-right: 1px solid $hrcolor;
+        border-bottom: 1px solid $hrcolor;
+
+        &-header {
+            display: flex;
+            align-items: center;
+            padding: 0px 0px 15px 15px;
+            width: 100%;
+            button {
+                padding: 0;
+            }
+            border-bottom: 1px solid $hrcolor;
+        }
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        &-twits {
+            padding: 15px 15px 0 15px;
+            &__loading {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        &-twits > * {
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+        }
+
+        // &-twits > *:not(:last-child) {
+        //     border-bottom: 1px solid $hrcolor;
+        // }
+        &-mytwit {
+
+        }
+    }
+
+    &__search {
+        flex-grow: 1;
+        padding-left: 15px;
+        &-actual {
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            &__title {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $hrcolor;
+                margin-bottom: 30px;
+                font-weight: 500;
+            }
+            &__ul {
+                display: flex;
+                flex-direction: column;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    border-bottom: 1px solid $hrcolor;
+                    p {
+                        font-weight: 500;
+                    }
+                    span {
+                        margin-top: 5px;
+                        color: $fullname-color;
+                        font-size: 14px;
+                    }
+                }
+            }
+            &__ul > *:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        &-read {
+            margin-top: 41px;
+            display: flex;
+            flex-direction: column;
+            &__profile {
+                border-bottom: 1px solid $hrcolor;
+                padding-bottom: 10px;
+                display: flex;
+                button {
+                    padding: 0;
+                    margin: 0;
+                }
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    min-width: 200px;
+                    margin-left: 20px;
+                }
+            }
+            &__title {
+                border-bottom: 1px solid $hrcolor;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                font-weight: 500;
+                border-bottom: 1px solid $hrcolor;
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+{
+  "tweets": [
+    {
+      "id": 1,
+      "text": "Текст 3 текст 3 текст 3 лололо",
+      "user": {
+        "fullname": "fillname",
+        "username": "username",
+        "avatarUrl": "https://picsum.photos/50/50"
+      }
+    },
+    {
+      "id": 2,
+      "text": "ЭТо очень длинный текст 2 2 2 2 2",
+      "user": {
+        "fullname": "fillname",
+        "username": "username",
+        "avatarUrl": "https://picsum.photos/50/50"
+      }
+    },
+    {
+      "id": 3,
+      "text": "Текс 111 11  11 это текст 1",
+      "user": {
+        "fullname": "fillname",
+        "username": "username",
+        "avatarUrl": "https://picsum.photos/50/50"
+      }
+    },
+    {
+      "id": 612,
+      "text": "твит тест",
+      "user": {
+        "fullname": "fullname test1",
+        "username": "username test2",
+        "avatarUrl": "https://day.ru/sites/default/files/image/2021-05/илон%20маск_1.jpg"
+      }
+    },
+    {
+      "id": 508,
+      "text": "твит 2",
+      "user": {
+        "fullname": "fullname test1",
+        "username": "username test2",
+        "avatarUrl": "https://day.ru/sites/default/files/image/2021-05/илон%20маск_1.jpg"
+      }
+    },
+    {
+      "id": 122,
+      "text": "твит 3",
+      "user": {
+        "fullname": "fullname test1",
+        "username": "username test2",
+        "avatarUrl": "https://day.ru/sites/default/files/image/2021-05/илон%20маск_1.jpg"
+      }
+    }
+  ],
+  "users": [
+    {
+      "fullname": "fillname",
+      "username": "username",
+      "avatarUrl": "https://picsum.photos/50/50"
+    },
+    {
+      "fullname": "fillname",
+      "username": "username",
+      "avatarUrl": "https://picsum.photos/50/50"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Россия vs Украина",
+      "count": 1543,
+      "id": "tag_1"
+    },
+    {
+      "name": "Илон Маск",
+      "count": 1521,
+      "id": "tag_2"
+    },
+    {
+      "name": "Путин",
+      "count": 14,
+      "id": "tag_3"
+    }
+  ],
+  "user": {
+    "id": "unical_1",
+    "fullname": "xtansy",
+    "usernmae": "xtansy",
+    "avatarUrl": "https://sun1-90.userapi.com/impf/6Gr_VdmC8FOPNzM_ONuiJpsoSAmQKED5SiHWig/xyCGTgMWXwU.jpg?size=2560x1920&quality=96&sign=9acdfa3ba458d1bb987301d2854fe098&type=album"
+  }
+}
