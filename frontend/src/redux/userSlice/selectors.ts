@@ -6,3 +6,6 @@ export const userLoadingSelector = (state: RootState) =>
 
 export const isAuthSelector = (state: RootState): boolean =>
     !!userDataSelector(state);
+
+export const userIdSelector = (state: RootState): string | undefined =>
+    state.user.data?._id;

@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { SignIn, Home } from "./Pages";
+import { useLocation } from "react-router-dom";
+
+import { SignIn, Home, User } from "./Pages";
+
 import {
     isAuthSelector,
     userLoadingSelector,
@@ -16,10 +19,13 @@ import { LoadingStatus } from "./redux/twitsSlice/types";
 
 function App() {
     const history = useNavigate();
+
+    const location = useLocation();
     const dispatch = useAppDispatch();
 
     const isAuth = useSelector(isAuthSelector);
     const loadingStatus = useSelector(userLoadingSelector);
+
     const isReady =
         loadingStatus !== LoadingStatus.NEVER &&
         loadingStatus !== LoadingStatus.LOADING;
@@ -27,7 +33,7 @@ function App() {
     useEffect(() => {
         if (!isAuth && isReady) {
             history("/sign");
-        } else {
+        } else if (location.pathname === "/") {
             history("/home");
         }
     }, [isAuth, isReady]);
@@ -45,8 +51,9 @@ function App() {
     }
     return (
         <Routes>
-            <Route path="sign" element={<SignIn />} />
             <Route path="*" element={<Home />} />
+            <Route path="/user/:id" element={<User />} />
+            <Route path="/sign" element={<SignIn />} />
         </Routes>
     );
 }

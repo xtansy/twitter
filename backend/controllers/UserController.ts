@@ -7,6 +7,7 @@ import { generateMD5 } from "../utils/generateHash";
 import sendEmail from "../utils/sendEmail";
 import { IUserModel, IUserModelDocument } from "../models/UserModel";
 import { isValidObjectId } from "../utils/isValidObjectId";
+import findUserTwits from "../utils/findUserTwits";
 
 class UserController {
     async show(req: any, res: express.Response): Promise<void> {
@@ -25,9 +26,12 @@ class UserController {
                 return;
             }
 
+            const userTwits = await findUserTwits(userId);
+
             res.json({
                 status: "success",
                 data: user,
+                twits: userTwits,
             });
         } catch (error) {
             res.json({

@@ -48,7 +48,10 @@ app.post("/auth/register", registerValidations, UserCtrl.create); // create user
 app.post("/auth/login", passport.authenticate("local"), UserCtrl.afterLogin); // jwt
 
 app.get("/twits", TwitsCtrl.index);
+
 app.get("/twits/:id", TwitsCtrl.show);
+app.get("/usertwits/:id", TwitsCtrl.userTwits);
+
 app.post(
     "/twits/create",
     passport.authenticate("jwt"),

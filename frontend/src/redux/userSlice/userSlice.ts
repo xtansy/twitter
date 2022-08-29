@@ -42,9 +42,9 @@ const userSlice = createSlice({
     name: "user",
     initialState,
     reducers: {
-        // addTwit: (state, action: PayloadAction<Twit>) => {
-        //     state.items = [action.payload, ...state.items];
-        // },
+        signOut: (state) => {
+            state.data = null;
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -79,4 +79,4 @@ const userSlice = createSlice({
 const { actions, reducer } = userSlice;
 export default reducer;
 
-// export const { addTwit } = actions;
+export const { signOut } = actions;

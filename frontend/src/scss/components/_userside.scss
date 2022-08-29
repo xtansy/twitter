@@ -1,0 +1,29 @@
+.userside {
+    margin-top: 150px;
+    max-width: 200px;
+    &__menu {
+        left: 200px !important;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-text {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &__arrow {
+                margin-left: 35px;
+            }
+        }
+    }
+    padding: 7px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    &:hover {
+        border: 1px solid $button-background;
+    }
+}

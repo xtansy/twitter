@@ -7,9 +7,32 @@ import {
     ITwitsModelDocument,
     TwitsModel,
 } from "../models/TwitModel";
-import { IUserModel } from "../models/UserModel";
+import { IUserModel, UserModel } from "../models/UserModel";
+import findUserTwits from "../utils/findUserTwits";
 
 class TwitsController {
+    async userTwits(req: any, res: express.Response): Promise<void> {
+        try {
+            const userId = req.params.id;
+
+            if (!isValidObjectId(userId)) {
+                res.status(400).send();
+                return;
+            }
+
+            const result = await findUserTwits(userId);
+
+            res.json({
+                status: "succes",
+                data: JSON.stringify(result),
+            });
+        } catch (error) {
+            res.status(500).json({
+                status: "error",
+                data: JSON.stringify(error),
+            });
+        }
+    }
     async index(_: any, res: express.Response): Promise<void> {
         try {
             const twits = await TwitsModel.find({}).populate("user").exec();
