@@ -4,6 +4,8 @@ export enum LoadingStatus {
     LOADING = "LOADING",
     NEVER = "NEVER",
     POST_TWIT_ERROR = "POST_TWIT_ERROR",
+    SUCCES_REGISTER = "SUCCES_REGISTER",
+    ERROR_REGISTER = "ERROR_REGISTER",
 }
 export interface Twit {
     _id: string;

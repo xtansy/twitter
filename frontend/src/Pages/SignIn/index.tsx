@@ -20,6 +20,8 @@ function SignIn() {
         undefined
     );
 
+    const [visibleAlert, setVisibleAlert] = useState<boolean>(true);
+
     const onOpenSignIn = () => {
         setVisibleModal(ModalType.SignIn);
     };
@@ -30,6 +32,10 @@ function SignIn() {
 
     const onCloseModal = () => {
         setVisibleModal(undefined);
+    };
+
+    const onCloseAlert = () => {
+        setVisibleAlert(false);
     };
 
     return (
@@ -43,24 +49,26 @@ function SignIn() {
                 onClose={onCloseModal}
             />
             <div className="signIn">
-                {/* {userLoadingStatus === LoadingStatus.ERROR && (
-                    <div className="signIn__alert">
-                        <Alert severity="error">
-                            <AlertTitle>Error</AlertTitle>
-                            This is an error alert —{" "}
-                            <strong>check it out!</strong>
-                        </Alert>
-                    </div>
-                )}
-                {userLoadingStatus === LoadingStatus.LOADED && (
-                    <div className="signIn__alert">
-                        <Alert severity="success">
-                            <AlertTitle>Success</AlertTitle>
-                            This is a success alert —{" "}
-                            <strong>check it out!</strong>
-                        </Alert>
-                    </div>
-                )} */}
+                {visibleAlert &&
+                    userLoadingStatus === LoadingStatus.ERROR_REGISTER && (
+                        <div className="signIn__alert">
+                            <Alert onClose={onCloseAlert} severity="error">
+                                <AlertTitle>Ошибка!</AlertTitle>
+                                Произошла ошибка при регистрации!
+                                <strong>check it out!</strong>
+                            </Alert>
+                        </div>
+                    )}
+                {visibleAlert &&
+                    userLoadingStatus === LoadingStatus.SUCCES_REGISTER && (
+                        <div className="signIn__alert">
+                            <Alert onClose={onCloseAlert} severity="success">
+                                <AlertTitle>Успешно!</AlertTitle>
+                                Вы успешно зарегистрировались!
+                                <strong>Авторизируйтесь для входа!</strong>
+                            </Alert>
+                        </div>
+                    )}
 
                 <div className="signIn__left">
                     <div className="signIn__left-text">

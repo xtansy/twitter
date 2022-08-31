@@ -28,6 +28,7 @@
     "scripts": {
         "start": "node dist/server.js",
         "dev": "ts-node server.ts",
+        "postinstall": "tsc",
         "nodemon": "nodemon"
     },
     "author": "",

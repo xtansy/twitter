@@ -45,6 +45,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ visible, onClose }) => {
         resolver: yupResolver(RegisterSchema),
     });
     const onSubmit = (data: RegisterProps) => {
+        onClose();
         dispatch(fetchRegisterUser(data));
     };
     return (

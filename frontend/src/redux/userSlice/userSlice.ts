@@ -48,6 +48,19 @@ const userSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
+
+            .addCase(fetchRegisterUser.pending, (state) => {
+                state.loadingStatus = LoadingStatus.LOADING;
+            })
+
+            .addCase(fetchRegisterUser.fulfilled, (state) => {
+                state.loadingStatus = LoadingStatus.SUCCES_REGISTER;
+            })
+
+            .addCase(fetchRegisterUser.rejected, (state) => {
+                state.loadingStatus = LoadingStatus.ERROR_REGISTER;
+            })
+
             .addCase(fetchLoginUser.rejected, (state) => {
                 state.loadingStatus = LoadingStatus.ERROR;
             })

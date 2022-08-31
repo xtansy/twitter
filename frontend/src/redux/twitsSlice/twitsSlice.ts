@@ -5,7 +5,7 @@ import { ITwits, Twit, LoadingStatus } from "./types";
 
 const initialState: ITwits = {
     items: [],
-    loadingStatus: LoadingStatus.LOADING,
+    loadingStatus: LoadingStatus.NEVER,
 };
 
 export interface Response<T> {

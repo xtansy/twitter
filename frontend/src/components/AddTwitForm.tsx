@@ -102,7 +102,9 @@ const AddTwitForm: React.FC<AddTwitFormProps> = ({ onCloseTweetModal }) => {
                         onClick={onClickAddTwit}
                         // disabled={textPercent > 100}
                         className={`button mytwit__subheader-button ${
-                            textPercent > 100 ? "button__disabled" : ""
+                            textPercent > 100 || textPercent === 0
+                                ? "button__disabled"
+                                : ""
                         }`}
                     >
                         {twitLoadingStatus === LoadingStatus.LOADING ? (

@@ -18,7 +18,7 @@ const initialState: ISingleTwit = {
             _id: "",
         },
     },
-    loadingStatus: TweetLoadingStatus.LOADING,
+    loadingStatus: TweetLoadingStatus.NEVER,
 };
 export const fetchSingleTwit = createAsyncThunk<Twit, string>(
     "singleTwit/fetchSingleTwit",

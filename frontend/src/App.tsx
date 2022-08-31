@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
 
-import { SignIn, Home, User } from "./Pages";
+import { SingleTwitPage, SignIn, Home, User } from "./Pages";
 
 import {
     isAuthSelector,
@@ -16,6 +16,8 @@ import {
 import { useAppDispatch } from "./redux/store";
 import { getMe } from "./redux/userSlice/userSlice";
 import { LoadingStatus } from "./redux/twitsSlice/types";
+
+// TODO:
 
 function App() {
     const history = useNavigate();
@@ -33,7 +35,7 @@ function App() {
     useEffect(() => {
         if (!isAuth && isReady) {
             history("/sign");
-        } else if (location.pathname === "/") {
+        } else if (!location.pathname.split("/").includes("user")) {
             history("/home");
         }
     }, [isAuth, isReady]);
@@ -51,7 +53,9 @@ function App() {
     }
     return (
         <Routes>
-            <Route path="*" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/home/tweets/:id" element={<SingleTwitPage />} />
+
             <Route path="/user/:id" element={<User />} />
             <Route path="/sign" element={<SignIn />} />
         </Routes>
